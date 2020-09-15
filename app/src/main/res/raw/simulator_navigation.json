@@ -3,6 +3,7 @@
     "videoId": "EFeeKPXC-HA",
     "name": "Intro",
     "id": 0,
+    "toadsDestroyed": 0,
     "gameOver": true,
     "controlTime": [
       {
@@ -43,6 +44,7 @@
     "videoId": "ZbC0iL0ADZQ",
     "name": "Eat some spaghetti!",
     "id": 1,
+    "toadsDestroyed": 0,
     "gameOver": false,
     "controlTime": [
       {
@@ -66,6 +68,7 @@
   "scene_02": {
     "videoId": "y8GcergrEbI",
     "name": "Get that MOFO",
+    "toadsDestroyed": 0,
     "id": 2,
     "gameOver": false,
     "controlTime": [
@@ -96,6 +99,7 @@
     "videoId": "nIwqqdjLER4",
     "name": "Get another princess!",
     "id": 3,
+    "toadsDestroyed": 1,
     "gameOver": true,
     "controlTime": [
       {
@@ -115,24 +119,126 @@
     "videoId": "NGSi9k2U4T8",
     "name":"Eat more spaghetti!",
     "id": 4,
-    "gameOver": false
+    "toadsDestroyed": 0,
+    "gameOver": false,
+    "controlTime": [
+      {
+        "timeStampStart": "0:06",
+        "timeStampEnd": "inf",
+        "options": [
+          {
+            "name": "Fine! go save peach",
+            "scene": "scene_02",
+            "button": "b"
+          },
+          {
+            "name": "More Spaghetti!",
+            "scene": "scene_08",
+            "button": "a"
+          }
+        ]
+      }
+    ]
   },
   "scene_05": {
     "videoId": "9ucy5lADPJc",
     "name": "Ride the sexy kart",
     "id": 5,
-    "gameOver": false
+    "toadsDestroyed": 0,
+    "gameOver": false,
+    "controlTime": [
+      {
+        "timeStampStart": "0:15",
+        "timeStampEnd": "0:17",
+        "options": [
+          {
+            "name": "Surprise ninja attack",
+            "scene": "scene_09",
+            "button": "a"
+          }
+        ]
+      },
+      {
+        "timeStampStart": "0:25",
+        "timeStampEnd": "inf",
+        "options": [
+          {
+            "name": "Persuade the cop",
+            "scene": "scene_10",
+            "button": "a"
+          },
+          {
+            "name": "Persuade the cop",
+            "scene": "scene_11",
+            "button": "Screw da law, run Mario!"
+          }
+        ]
+      }
+    ]
   },
   "scene_06": {
     "videoId": "WePZu6gZDw4",
     "name": "Ride the yoshi",
+    "toadsDestroyed": 0,
     "id": 6,
-    "gameOver": false
+    "gameOver": false,
+    "controlTime": [
+      {
+        "timeStampStart": "0:10",
+        "timeStampEnd": "inf",
+        "options": [
+          {
+            "name": "Smoke Shrooms Every Day!",
+            "scene": "scene_12",
+            "button": "a"
+          },
+          {
+            "name": "Feed it curry",
+            "scene": "scene_13",
+            "button": "z"
+          }
+        ]
+      }
+    ]
   },
   "scene_07": {
     "videoId": "Fi2Uiwt1Af0",
     "name": "Use the warp pipe!",
     "id": 7,
-    "gameOver": true
+    "toadsDestroyed": 1,
+    "gameOver": true,
+    "controlTime": [
+      {
+        "timeStampStart": "0:50",
+        "timeStampEnd": "inf",
+        "options": [
+          {
+            "name": "No pipe for you",
+            "scene": "scene_02",
+            "button": "none"
+          }
+        ]
+      }
+    ]
+  },
+  "scene_08": {
+    "videoId": "9U1_hmQNF-4",
+    "name": "Eat even more spaghetti!",
+    "id": 8,
+    "toadsDestroyed": 0,
+    "gameOver": true,
+    "controlTime": [
+      {
+        "timeStampStart": "0:16",
+        "timeStampEnd": "inf",
+        "options": [
+          {
+            "name": "Go save her now!",
+            "scene": "scene_02",
+            "button": "none"
+          }
+        ]
+      }
+    ]
   }
 }
