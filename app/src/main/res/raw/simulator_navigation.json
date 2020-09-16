@@ -168,9 +168,9 @@
             "button": "a"
           },
           {
-            "name": "Persuade the cop",
+            "name": "Screw da law, run Mario!",
             "scene": "scene_11",
-            "button": "Screw da law, run Mario!"
+            "button": "z"
           }
         ]
       }
@@ -236,6 +236,347 @@
             "name": "Go save her now!",
             "scene": "scene_02",
             "button": "none"
+          }
+        ]
+      }
+    ]
+  },
+  "scene_09": {
+    "videoId": "f59YQ_mP1Zs",
+    "name": "Surprise ninja attack",
+    "id": 9,
+    "toadsDestroyed": 1,
+    "gameOver": false,
+    "controlTime": [
+      {
+        "timeStampStart": "0:18",
+        "timeStampEnd": "inf",
+        "options": [
+          {
+            "name": "Persuade the cop",
+            "scene": "scene_10",
+            "button": "a"
+          },
+          {
+            "name": "Screw da law, run Mario!",
+            "scene": "scene_11",
+            "button": "z"
+          }
+        ]
+      }
+    ]
+  },
+  "scene_10": {
+    "videoId": "XCh7b7LzF5w",
+    "name": "Persuade the cop",
+    "id": 10,
+    "toadsDestroyed": 0,
+    "gameOver": true,
+    "controlTime": [
+      {
+        "timeStampStart": "0:16",
+        "timeStampEnd": "inf",
+        "options": [
+          {
+            "name": "re-evaluate your life",
+            "scene": "scene_05",
+            "button": "none"
+          }
+        ]
+      }
+    ]
+  },
+  "scene_11": {
+    "videoId": "BqGTJjel3VQ",
+    "name": "DRIVE MARIO! DRIVE!!",
+    "id": 11,
+    "toadsDestroyed": 0,
+    "gameOver": false,
+    "controlTime": [
+      {
+        "timeStampStart": "0:05",
+        "timeStampEnd": "0:07",
+        "options": [
+          {
+            "name": "OH GOD MARIO! WATCH OUT!",
+            "scene": "scene_14",
+            "button": "a"
+          }
+        ]
+      },
+      {
+        "timeStampStart": "0:21",
+        "timeStampEnd": "inf",
+        "options": [
+          {
+            "name": "help the poor lady",
+            "scene": "scene_15",
+            "button": "a"
+          },
+          {
+            "name": "Screw that! I got princesses to save!",
+            "scene": "scene_16",
+            "button": "b"
+          }
+        ]
+      }
+    ]
+  },
+  "scene_12":{
+    "videoId": "-6Ib9Rgxg78",
+    "name": "Feed him mushrooms",
+    "id": 12,
+    "toadsDestroyed": 0,
+    "gameOver": true,
+    "controlTime": [
+      {
+        "timeStampStart": "0:49",
+        "timeStampEnd": "inf",
+        "options": [
+          {
+            "name": "Might wanna go back a video",
+            "scene": "scene_06",
+            "button": "none"
+          }
+        ]
+      }
+    ]
+  },
+  "scene_13": {
+    "videoId": "MydKdctpLg0",
+    "name": "Feed him curry",
+    "id": 13,
+    "toadsDestroyed": 0,
+    "gameOver": false,
+    "controlTime": [
+      {
+        "timeStampStart": "0:25",
+        "timeStampEnd": "inf",
+        "options": [
+          {
+            "name": "help the poor lady",
+            "scene": "scene_15",
+            "button": "a"
+          },
+          {
+            "name": "Screw that! I got princesses to save!",
+            "scene": "scene_16",
+            "button": "b"
+          }
+        ]
+      }
+    ]
+  },
+  "scene_14": {
+    "videoId": "1nqGGHHzcE0",
+    "name": "MARIO WATCH OUT!",
+    "id": 14,
+    "toadsDestroyed": 0,
+    "gameOver": true,
+    "controlTime": [
+      {
+        "timeStampStart": "0:25",
+        "timeStampEnd": "inf",
+        "options": [
+          {
+            "name": "let him crash!!",
+            "scene": "scene_11",
+            "button": "none"
+          }
+        ]
+      }
+    ]
+  },
+  "scene_15": {
+    "videoId": "Sze3VFMOCJI",
+    "name": "Help the poor lady",
+    "id": 15,
+    "toadsDestroyed": 0,
+    "gameOver": false,
+    "controlTime": [
+      {
+        "timeStampStart": "0:36",
+        "timeStampEnd": "inf",
+        "options": [
+          {
+            "name": "do the safety dance",
+            "scene": "scene_17",
+            "button": "left"
+          },
+          {
+            "name": "use the stick!",
+            "scene": "scene_18",
+            "button": "down"
+          },
+          {
+            "name": "throw crap at it",
+            "scene": "scene_19",
+            "button": "right"
+          }
+        ]
+      }
+    ]
+  },
+  "scene_16": {
+    "videoId": "9GxqrAP7ejI",
+    "name": "Screw that! i got princesses to save!",
+    "id": 16,
+    "toadsDestroyed": 0,
+    "gameOver": false,
+    "controlTime": [
+      {
+        "timeStampStart": "0:12",
+        "timeStampEnd": "inf",
+        "options": [
+          {
+            "name": "do the safety dance",
+            "scene": "scene_17",
+            "button": "left"
+          },
+          {
+            "name": "throw crap at it",
+            "scene": "scene_19",
+            "button": "right"
+          }
+        ]
+      }
+    ]
+  },
+  "scene_17":{
+    "videoId": "n7yX4Rcclrg",
+    "name": "Do the Safety Dance!",
+    "id": 17,
+    "toadsDestroyed": 0,
+    "gameOver": true,
+    "controlTime": [
+      {
+        "timeStampStart": "0:20",
+        "timeStampEnd": "inf",
+        "options": [
+          {
+            "name": "did you miss something",
+            "scene": "scene_15",
+            "button": "none"
+          }
+        ]
+      }
+    ]
+  },
+  "scene_18":{
+    "videoId": "vmXK7qVBAUU",
+    "name": "USE DA STICK!",
+    "id": 18,
+    "toadsDestroyed": 0,
+    "gameOver": false,
+    "controlTime": [
+      {
+        "timeStampStart": "0:25",
+        "timeStampEnd": "inf",
+        "options": [
+          {
+            "name": "spaghetti!!!",
+            "scene": "scene_20",
+            "button": "a"
+          },
+          {
+            "name": "directions to bowser's castle",
+            "scene": "scene_21",
+            "button": "b"
+          },
+          {
+            "name": "shoot him in the face",
+            "scene": "scene_22",
+            "button": "z"
+          }
+        ]
+      }
+    ]
+  },
+  "scene_19":{
+    "videoId": "7K57pw_d2Fw",
+    "name": "Throw crap at it",
+    "id": 19,
+    "toadsDestroyed": 0,
+    "gameOver": true,
+    "controlTime": [
+      {
+        "timeStampStart": "0:26",
+        "timeStampEnd": "inf",
+        "options": [
+          {
+            "name": "did you miss something",
+            "scene": "scene_15",
+            "button": "none"
+          }
+        ]
+      }
+    ]
+  },
+  "scene_20": {
+    "videoId": "OJ-Z-Z9VF7g",
+    "name": "CAN I HAVE Spaghetti!?",
+    "id": 20,
+    "toadsDestroyed": 0,
+    "gameOver": true,
+    "controlTime": [
+      {
+        "timeStampStart": "0:28",
+        "timeStampEnd": "inf",
+        "options": [
+          {
+            "name": "no spaghetti! >:(",
+            "scene": "scene_18",
+            "button": "none"
+          }
+        ]
+      }
+    ]
+  },
+  "scene_21": {
+    "videoId": "KJDx2Cd2rFc",
+    "name": "Directions to bowser's castle",
+    "id": 21,
+    "toadsDestroyed": 0,
+    "gameOver": false,
+    "controlTime": [
+      {
+        "timeStampStart": "0:25",
+        "timeStampEnd": "inf",
+        "options": [
+          {
+            "name": "get money from that koopa",
+            "scene": "scene_23",
+            "button": "z"
+          },
+          {
+            "name": "get money from the item block",
+            "scene": "scene_24",
+            "button": "b"
+          }
+        ]
+      }
+    ]
+  },
+  "scene_22": {
+    "videoId": "ADFE2Qu7wLk",
+    "name": "Shoot him in the face",
+    "id": 22,
+    "toadsDestroyed": 1,
+    "gameOver": false,
+    "controlTime": [
+      {
+        "timeStampStart": "0:27",
+        "timeStampEnd": "inf",
+        "options": [
+          {
+            "name": "get money from that koopa",
+            "scene": "scene_23",
+            "button": "z"
+          },
+          {
+            "name": "get money from the item block",
+            "scene": "scene_24",
+            "button": "b"
           }
         ]
       }
