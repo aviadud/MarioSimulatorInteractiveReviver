@@ -581,5 +581,278 @@
         ]
       }
     ]
+  },
+  "scene_23": {
+    "videoId": "omyPLJs75Tg",
+    "name": "Get money from the koopa",
+    "id": 23,
+    "toadsDestroyed": 0,
+    "gameOver": false,
+    "controlTime": [
+      {
+        "timeStampStart": "0:13",
+        "timeStampEnd": "inf",
+        "options": [
+          {
+            "name": "\"you're not fat! look at how fat i am!\" (show your fat)",
+            "scene": "scene_25",
+            "button": "down"
+          },
+          {
+            "name": "Stomp on the koopa and take the coin",
+            "scene": "scene_26",
+            "button": "up"
+          }
+        ]
+      }
+    ]
+
+  },
+  "scene_24": {
+    "videoId": "MKuoz2Bxyys",
+    "name": "Get money from the block!",
+    "id": 24,
+    "toadsDestroyed": 0,
+    "gameOver": true,
+    "controlTime": [
+      {
+        "timeStampStart": "0:25",
+        "timeStampEnd": "inf",
+        "options": [
+          {
+            "name": "even block have feelings...",
+            "scene": "scene_21",
+            "button": "none"
+          }
+        ]
+      }
+    ]
+  },
+  "scene_25": {
+    "videoId": "dt_in6jQItg",
+    "name": "Show how fat you are",
+    "id": 25,
+    "toadsDestroyed": 0,
+    "gameOver": true,
+    "controlTime": [
+      {
+        "timeStampStart": "0:32",
+        "timeStampEnd": "inf",
+        "options": [
+          {
+            "name": "put your clothes back on!",
+            "scene": "scene_23",
+            "button": "none"
+          }
+        ]
+      }
+    ]
+  },
+  "scene_26": {
+    "videoId": "C9mfk9aj0Fs",
+    "name": "Stomp the koopa and take the coin",
+    "id": 26,
+    "toadsDestroyed": 0,
+    "gameOver": false,
+    "controlTime": [
+      {
+        "timeStampStart": "0:12",
+        "timeStampEnd": "inf",
+        "options": [
+          {
+            "name": "spaghetti shop",
+            "scene": "none",
+            "button": "none",
+            "text": "Buy the spaghetti DLC 599$!"
+          },
+          {
+            "name": "Port penguz",
+            "scene": "scene_27",
+            "button": "none"
+          },
+          {
+            "name": "Mario bros. house",
+            "scene": "scene_28",
+            "button": "none"
+          }
+        ]
+      }
+    ]
+  },
+  "scene_27": {
+    "videoId": "Ai0eoFVa56w",
+    "name": " Go to Port Penguz",
+    "id": 27,
+    "toadsDestroyed": 0,
+    "gameOver": false,
+    "controlTime": [
+      {
+        "timeStampStart": "0:14",
+        "timeStampEnd": "inf",
+        "options": [
+          {
+            "name": "spaghetti",
+            "scene": "scene_29",
+            "button": "a"
+          },
+          {
+            "name": "Super Smash 360 Noscope Attack",
+            "scene": "scene_30",
+            "button": "b"
+          },
+          {
+            "name": "punch",
+            "scene": "scene_31",
+            "button": "z"
+          },
+          {
+            "name": "Scare",
+            "scene": "scene_32",
+            "button": "right"
+          }
+        ]
+      }
+    ]
+  },
+  "scene_28": {
+    "videoId": "jasBSxYYemQ",
+    "name": "Go to the Mario bros house",
+    "id": 28,
+    "toadsDestroyed": 0,
+    "gameOver": true,
+    "controlTime": [
+      {
+        "timeStampStart": "0:37",
+        "timeStampEnd": "inf",
+        "options": [
+          {
+            "name": "better off not going back home",
+            "scene": "scene_26",
+            "button": "none"
+          }
+        ]
+      }
+    ]
+  },
+  "scene_29": {
+    "videoId": "sY5FWXeH0_U",
+    "name": "Use the SPAGHETTI!",
+    "id": 29,
+    "toadsDestroyed": 0,
+    "gameOver": false,
+    "controlTime": [
+      {
+        "timeStampStart": "0:48",
+        "timeStampEnd": "0:53",
+        "options": [
+          {
+            "name": "Eat that spicy spaghetti",
+            "scene": "scene_33",
+            "button": "none"
+          }
+        ]
+      },
+      {
+        "timeStampStart": "1:08",
+        "timeStampEnd": "inf",
+        "options": [
+          {
+            "name": "go after that guy you saw before",
+            "scene": "scene_34",
+            "button": "left"
+          },
+          {
+            "name": "go get a free boat! and go to the lair!",
+            "scene": "scene_35",
+            "button": "right"
+          }
+        ]
+      }
+    ]
+  },
+  "scene_30": {
+    "videoId":"fbHt1cp1qnw",
+    "name": "SUPER SMASH 360 NOSCOPE PINGAS ATTACK",
+    "id": 30,
+    "toadsDestroyed": 0,
+    "gameOver": true,
+    "controlTime": [
+      {
+        "timeStampStart": "0:21",
+        "timeStampEnd": "inf",
+        "options": [
+          {
+            "name": "Rematch",
+            "scene": "scene_27",
+            "button": "none"
+          }
+        ]
+      }
+    ]
+  },
+  "scene_31": {
+    "videoId":"zjEAldi83gs",
+    "name": "Punch them",
+    "id": 31,
+    "toadsDestroyed": 0,
+    "gameOver": true,
+    "controlTime": [
+      {
+        "timeStampStart": "0:22",
+        "timeStampEnd": "inf",
+        "options": [
+          {
+            "name": "Rematch",
+            "scene": "scene_27",
+            "button": "none"
+          }
+        ]
+      }
+    ]
+  },
+  "scene_32": {
+    "videoId":"3PJNnUQLFaw",
+    "name": "Be scary",
+    "id": 32,
+    "toadsDestroyed": 0,
+    "gameOver": true,
+    "controlTime": [
+      {
+        "timeStampStart": "0:21",
+        "timeStampEnd": "inf",
+        "options": [
+          {
+            "name": "Rematch",
+            "scene": "scene_27",
+            "button": "none"
+          }
+        ]
+      }
+    ]
+  },
+  "scene_33": {
+    "videoId": "NjbW5nzn7eU",
+    "name": "Eat that spicy spaghetti!",
+    "id": 33,
+    "toadsDestroyed": 1,
+    "gameOver": false,
+    "controlTime": [
+      {
+        "timeStampStart": "0:45",
+        "timeStampEnd": "inf",
+        "options": [
+          {
+            "name": "go after that guy you saw before",
+            "scene": "scene_34",
+            "button": "left"
+          },
+          {
+            "name": "go get a free boat! and go to the lair!",
+            "scene": "scene_35",
+            "button": "right"
+          }
+        ]
+      }
+    ]
   }
 }
