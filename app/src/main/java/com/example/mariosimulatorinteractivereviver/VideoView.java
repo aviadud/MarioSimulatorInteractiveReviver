@@ -30,7 +30,6 @@ public class VideoView extends YouTubeBaseActivity {
         setContentView(R.layout.activity_video_view);
         youTubePlayerView = findViewById(R.id.youtubePlayerView);
         playButton = findViewById(R.id.playButton);
-        videoIdEditText = findViewById(R.id.editTextVideoId);
         millisecondsEditText = findViewById(R.id.editTextMilliseconds);
 
         youtubeInitializedListener = new YouTubePlayer.OnInitializedListener() {
@@ -38,7 +37,7 @@ public class VideoView extends YouTubeBaseActivity {
             public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean b) {
                 Log.d(TAG, "Youtube player initialization succeeded");
                 mYouTubePlayer = youTubePlayer;
-                mYouTubePlayer.loadVideo("EFeeKPXC-HA", 66000);
+                mYouTubePlayer.loadPlaylist("PLqtXS2zBPMiTCrDc-LSWr03fJSx916koi");
             }
 
             @Override
@@ -53,7 +52,7 @@ public class VideoView extends YouTubeBaseActivity {
             @Override
             public void onClick(View v) {
                 Log.d(TAG, "play button clicked");
-                mYouTubePlayer.loadVideo(videoIdEditText.getText().toString(), Integer.parseInt(millisecondsEditText.getText().toString()));
+                mYouTubePlayer.seekToMillis(Integer.parseInt(millisecondsEditText.getText().toString()));
             }
         });
 

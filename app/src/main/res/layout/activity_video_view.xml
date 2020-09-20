@@ -28,18 +28,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <EditText
-        android:id="@+id/editTextVideoId"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="VideoId"
-        app:layout_constraintBottom_toTopOf="@+id/editTextMilliseconds"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
     <Button
         android:id="@+id/playButton"
         android:layout_width="wrap_content"
