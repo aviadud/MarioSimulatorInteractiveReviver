@@ -3,6 +3,7 @@
     "videoId": "EFeeKPXC-HA",
     "name": "Intro",
     "id": 0,
+    "playlistIndex": 1,
     "toadsDestroyed": 0,
     "gameOver": true,
     "controlTime": [
@@ -854,5 +855,13 @@
         ]
       }
     ]
+  },
+  "scene_34": {
+    "videoId": "NfLN1sgbkeA",
+    "name": "Follow those pirates",
+    "id": 34,
+    "playlistIndex": 34,
+    "toadsDestroyed": 0,
+    "gameOver": false
   }
 }
