@@ -118,7 +118,7 @@
   },
   "scene_04": {
     "videoId": "NGSi9k2U4T8",
-    "name":"Eat more spaghetti!",
+    "name": "Eat more spaghetti!",
     "id": 4,
     "toadsDestroyed": 0,
     "gameOver": false,
@@ -323,7 +323,7 @@
       }
     ]
   },
-  "scene_12":{
+  "scene_12": {
     "videoId": "-6Ib9Rgxg78",
     "name": "Feed him mushrooms",
     "id": 12,
@@ -443,7 +443,7 @@
       }
     ]
   },
-  "scene_17":{
+  "scene_17": {
     "videoId": "n7yX4Rcclrg",
     "name": "Do the Safety Dance!",
     "id": 17,
@@ -463,7 +463,7 @@
       }
     ]
   },
-  "scene_18":{
+  "scene_18": {
     "videoId": "vmXK7qVBAUU",
     "name": "USE DA STICK!",
     "id": 18,
@@ -493,7 +493,7 @@
       }
     ]
   },
-  "scene_19":{
+  "scene_19": {
     "videoId": "7K57pw_d2Fw",
     "name": "Throw crap at it",
     "id": 19,
@@ -607,7 +607,6 @@
         ]
       }
     ]
-
   },
   "scene_24": {
     "videoId": "MKuoz2Bxyys",
@@ -772,7 +771,7 @@
     ]
   },
   "scene_30": {
-    "videoId":"fbHt1cp1qnw",
+    "videoId": "fbHt1cp1qnw",
     "name": "SUPER SMASH 360 NOSCOPE PINGAS ATTACK",
     "id": 30,
     "toadsDestroyed": 0,
@@ -792,7 +791,7 @@
     ]
   },
   "scene_31": {
-    "videoId":"zjEAldi83gs",
+    "videoId": "zjEAldi83gs",
     "name": "Punch them",
     "id": 31,
     "toadsDestroyed": 0,
@@ -812,7 +811,7 @@
     ]
   },
   "scene_32": {
-    "videoId":"3PJNnUQLFaw",
+    "videoId": "3PJNnUQLFaw",
     "name": "Be scary",
     "id": 32,
     "toadsDestroyed": 0,
@@ -862,6 +861,224 @@
     "id": 34,
     "playlistIndex": 34,
     "toadsDestroyed": 0,
-    "gameOver": false
+    "gameOver": false,
+    "controlTime": [
+      {
+        "timeStampStart": "0:33",
+        "timeStampEnd": "inf",
+        "options": [
+          {
+            "name": "sing the pirate song",
+            "scene": "scene_36",
+            "button": "a"
+          },
+          {
+            "name": "talk about pirate adventure",
+            "scene": "scene_37",
+            "button": "z"
+          },
+          {
+            "name": "show them yee pirate booty",
+            "scene": "scene_38",
+            "button": "b"
+          }
+        ]
+      }
+    ]
+  },
+  "scene_35": {
+    "videoId": "NqjR-Eu8Ul8",
+    "name": "Get a free boat",
+    "id": 35,
+    "playlistIndex": 35,
+    "toadsDestroyed": 0,
+    "gameOver": true,
+    "controlTime": [
+      {
+        "timeStampStart": "0:28",
+        "timeStampEnd": "inf",
+        "options": [
+          {
+            "name": "you need a bigger boat!",
+            "scene": "scene_29",
+            "button": "none"
+          }
+        ]
+      }
+    ]
+  },
+  "scene_36": {
+    "videoId": "P4HKnty97lk",
+    "name": "Sing the pirate song",
+    "id": 36,
+    "playlistIndex": 37,
+    "toadsDestroyed": 0,
+    "gameOver": true,
+    "controlTime": [
+      {
+        "timeStampStart": "0:24",
+        "timeStampEnd": "inf",
+        "options": [
+          {
+            "name": "be more convincing!",
+            "scene": "scene_34",
+            "button": "none"
+          }
+        ]
+      }
+    ]
+  },
+  "scene_37": {
+    "videoId": "NfmZ1ezUflo",
+    "name": "Tell Pirate adventures",
+    "id": 37,
+    "playlistIndex": 36,
+    "toadsDestroyed": 1,
+    "gameOver": true,
+    "controlTime": [
+      {
+        "timeStampStart": "0:42",
+        "timeStampEnd": "inf",
+        "options": [
+          {
+            "name": "be more convincing!",
+            "scene": "scene_34",
+            "button": "none"
+          }
+        ]
+      }
+    ]
+  },
+  "scene_38": {
+    "videoId": "b5XqmyHiN4M",
+    "name": "Show them Yee Pirate booty",
+    "id": 38,
+    "playlistIndex": 38,
+    "toadsDestroyed": 0,
+    "gameOver": false,
+    "controlTime": [
+      {
+        "timeStampStart": "0:55",
+        "timeStampEnd": "0:58",
+        "options": [
+          {
+            "name": "It was the fox",
+            "scene": "scene_39",
+            "button": "a"
+          },
+          {
+            "name": "It was the shay guy",
+            "scene": "scene_40",
+            "button": "b"
+          }
+        ]
+      },
+      {
+        "timeStampStart": "0:58",
+        "timeStampEnd": "inf",
+        "options": [
+          {
+            "name": "It was the fox",
+            "scene": "scene_39",
+            "button": "a"
+          },
+          {
+            "name": "It was the shay guy",
+            "scene": "scene_40",
+            "button": "b"
+          },
+          {
+            "name": "TOAD",
+            "scene": "scene_41",
+            "button": "none"
+          }
+        ]
+      }
+    ]
+  },
+  "scene_39": {
+    "videoId": "PtTfO6jYnyw",
+    "name": "Twas the fox",
+    "id": 39,
+    "playlistIndex": 40,
+    "toadsDestroyed": 0,
+    "gameOver": true,
+    "controlTime": [
+      {
+        "timeStampStart": "0:43",
+        "timeStampEnd": "inf",
+        "options": [
+          {
+            "name": "try again, without the vomiting",
+            "scene": "scene_38",
+            "button": "none"
+          }
+        ]
+      }
+    ]
+  },
+  "scene_40": {
+    "videoId": "DKbLcjFUOWc",
+    "name": "Twas the Shy guy",
+    "id": 40,
+    "playlistIndex": 41,
+    "toadsDestroyed": 0,
+    "gameOver": false,
+    "controlTime": [
+      {
+        "timeStampStart": "0:43",
+        "timeStampEnd": "inf",
+        "options": [
+          {
+            "name": "Waluigi picture",
+            "scene": "scene_42",
+            "button": "down"
+          },
+          {
+            "name": "Waluigi launcher",
+            "scene": "scene_43",
+            "button": "up"
+          }
+        ]
+      }
+    ]
+  },
+  "scene_41": {
+    "videoId": "u1ABiTfGw_s",
+    "name": "Waluigi Picture",
+    "id": 41,
+    "playlistIndex": 43,
+    "toadsDestroyed": 0,
+    "gameOver": false,
+    "controlTime": [
+      {
+        "timeStampStart": "0:35",
+        "timeStampEnd": "inf",
+        "options": [
+
+        ]
+      }
+    ]
+  },
+  "scene_42": {
+    "videoId": "ufnnPoH0UYM",
+    "name": "Waluigi Launcher time",
+    "id": 42,
+    "playlistIndex": 42,
+    "toadsDestroyed": 0,
+    "gameOver": true,
+    "controlTime": [
+      {
+        "timeStampStart": "0:26",
+        "timeStampEnd": "inf",
+        "options": [
+          {
+            "name": "not waluigi time",
+            "scene": "scene_40",
+            "button": "none"
+          }
+        ]
+      }
+    ]
   }
 }
