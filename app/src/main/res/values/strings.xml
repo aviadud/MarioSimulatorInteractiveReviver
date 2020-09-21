@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Mario Simulator Interactive Reviver</string>
     <string name="database_entry_point">scene_main</string>
+    <string name="database_video_id_key">videoId</string>
 </resources>
