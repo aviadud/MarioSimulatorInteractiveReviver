@@ -21,11 +21,12 @@ public class MainActivity extends YouTubeBaseActivity {
     private static final String TAG = MainActivity.class.getSimpleName();
 
     private YouTubePlayerView mYouTubePlayerView;
+    private YouTubePlayer mYouTubePlayer;
     private RelativeLayout buttonsLayout;
     private JSONObject database;
 
     private String currentVideoId;
-    private String currentTimeStamp;
+    private int currentTimeStamp;
 
 
     @Override
@@ -34,6 +35,8 @@ public class MainActivity extends YouTubeBaseActivity {
         setContentView(R.layout.activity_main);
         mYouTubePlayerView = findViewById(R.id.mainYoutubePlayerView);
         buttonsLayout = findViewById(R.id.buttonsView);
+
+        currentTimeStamp = 0; //remove later
 
         try {
             database = new JSONObject(DataLoader.JsonFilePathToString(getResources().openRawResource(R.raw.simulator_navigation)));
@@ -49,12 +52,14 @@ public class MainActivity extends YouTubeBaseActivity {
         mYouTubePlayerView.initialize(Constants.YOUTUBE_API_KEY, new YouTubePlayer.OnInitializedListener() {
             @Override
             public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean b) {
-
+                Log.d(TAG, "Youtube player initialization succeeded");
+                mYouTubePlayer = youTubePlayer;
+                mYouTubePlayer.loadVideo(currentVideoId, currentTimeStamp);
             }
 
             @Override
             public void onInitializationFailure(YouTubePlayer.Provider provider, YouTubeInitializationResult youTubeInitializationResult) {
-
+                Log.d(TAG, "Youtube player initialization failed");
             }
         });
     }
