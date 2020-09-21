@@ -1,7 +1,5 @@
 package com.example.mariosimulatorinteractivereviver;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -13,8 +11,8 @@ import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubePlayer;
 import com.google.android.youtube.player.YouTubePlayerView;
 
-public class VideoView extends YouTubeBaseActivity {
-    private static final String TAG = "VideoView";
+public class VideoViewActivity extends YouTubeBaseActivity {
+    private static final String TAG = VideoViewActivity.class.getSimpleName();
 
     private YouTubePlayerView youTubePlayerView;
     private Button playButton;

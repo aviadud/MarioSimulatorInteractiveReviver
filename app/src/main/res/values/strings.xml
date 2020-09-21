@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Mario Simulator Interactive Reviver</string>
+    <string name="database_entry_point">scene_main</string>
 </resources>
