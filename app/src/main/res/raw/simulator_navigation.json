@@ -13,29 +13,18 @@
         "options": [
           {
             "name": "Eat some spaghetti",
-            "scene": "scene_01",
+            "scene": 1,
             "button": "arrowUp"
           },
           {
             "name": "Get that MOFO",
-            "scene": "scene_02",
+            "scene": 2,
             "button": "z"
           },
           {
             "name": "Get another princess",
-            "scene": "scene_03",
+            "scene": 3,
             "button": "arrowRight"
-          }
-        ]
-      },
-      {
-        "timeStampStart": "1:24",
-        "timeStampEnd": "inf",
-        "options": [
-          {
-            "name": "Try again",
-            "scene": "scene_03",
-            "button": "None"
           }
         ]
       }
@@ -45,6 +34,7 @@
     "videoId": "ZbC0iL0ADZQ",
     "name": "Eat some spaghetti!",
     "id": 1,
+    "playlistIndex": 3,
     "toadsDestroyed": 0,
     "gameOver": false,
     "controlTime": [
@@ -54,12 +44,12 @@
         "options": [
           {
             "name": "Eat more spaghetti",
-            "scene": "scene_04",
+            "scene": 4,
             "button": "a"
           },
           {
             "name": "Fine! go save peach",
-            "scene": "scene_02",
+            "scene": 2,
             "button": "b"
           }
         ]
@@ -71,6 +61,7 @@
     "name": "Get that MOFO",
     "toadsDestroyed": 0,
     "id": 2,
+    "playlistIndex": 6,
     "gameOver": false,
     "controlTime": [
       {
@@ -79,17 +70,17 @@
         "options": [
           {
             "name": "Ride the sexy kart",
-            "scene": "scene_05",
+            "scene": 5,
             "button": "b"
           },
           {
             "name": "Ride the Yoshi",
-            "scene": "scene_06",
+            "scene": 6,
             "button": "r"
           },
           {
             "name": "Warp pipe time!",
-            "scene": "scene_07",
+            "scene": 7,
             "button": "z"
           }
         ]
@@ -100,6 +91,7 @@
     "videoId": "nIwqqdjLER4",
     "name": "Get another princess!",
     "id": 3,
+    "playlistIndex": 2,
     "toadsDestroyed": 1,
     "gameOver": true,
     "controlTime": [
@@ -109,7 +101,7 @@
         "options": [
           {
             "name": "Go save her now!",
-            "scene": "scene_02",
+            "scene": 2,
             "button": "none"
           }
         ]
@@ -120,6 +112,7 @@
     "videoId": "NGSi9k2U4T8",
     "name": "Eat more spaghetti!",
     "id": 4,
+    "playlistIndex": 3,
     "toadsDestroyed": 0,
     "gameOver": false,
     "controlTime": [
@@ -129,12 +122,12 @@
         "options": [
           {
             "name": "Fine! go save peach",
-            "scene": "scene_02",
+            "scene": 2,
             "button": "b"
           },
           {
             "name": "More Spaghetti!",
-            "scene": "scene_08",
+            "scene": 8,
             "button": "a"
           }
         ]
@@ -145,6 +138,7 @@
     "videoId": "9ucy5lADPJc",
     "name": "Ride the sexy kart",
     "id": 5,
+    "playlistIndex": 8,
     "toadsDestroyed": 0,
     "gameOver": false,
     "controlTime": [
@@ -154,7 +148,7 @@
         "options": [
           {
             "name": "Surprise ninja attack",
-            "scene": "scene_09",
+            "scene": 9,
             "button": "a"
           }
         ]
@@ -165,12 +159,12 @@
         "options": [
           {
             "name": "Persuade the cop",
-            "scene": "scene_10",
+            "scene": 10,
             "button": "a"
           },
           {
             "name": "Screw da law, run Mario!",
-            "scene": "scene_11",
+            "scene": 11,
             "button": "z"
           }
         ]
@@ -182,6 +176,7 @@
     "name": "Ride the yoshi",
     "toadsDestroyed": 0,
     "id": 6,
+    "playlistIndex": 12,
     "gameOver": false,
     "controlTime": [
       {
@@ -190,12 +185,12 @@
         "options": [
           {
             "name": "Smoke Shrooms Every Day!",
-            "scene": "scene_12",
+            "scene": 12,
             "button": "a"
           },
           {
             "name": "Feed it curry",
-            "scene": "scene_13",
+            "scene": 13,
             "button": "z"
           }
         ]
@@ -206,6 +201,7 @@
     "videoId": "Fi2Uiwt1Af0",
     "name": "Use the warp pipe!",
     "id": 7,
+    "playlistIndex": 7,
     "toadsDestroyed": 1,
     "gameOver": true,
     "controlTime": [
@@ -215,7 +211,7 @@
         "options": [
           {
             "name": "No pipe for you",
-            "scene": "scene_02",
+            "scene": 2,
             "button": "none"
           }
         ]
@@ -226,6 +222,7 @@
     "videoId": "9U1_hmQNF-4",
     "name": "Eat even more spaghetti!",
     "id": 8,
+    "playlistIndex": 5,
     "toadsDestroyed": 0,
     "gameOver": true,
     "controlTime": [
@@ -235,7 +232,7 @@
         "options": [
           {
             "name": "Go save her now!",
-            "scene": "scene_02",
+            "scene": 2,
             "button": "none"
           }
         ]
@@ -246,6 +243,7 @@
     "videoId": "f59YQ_mP1Zs",
     "name": "Surprise ninja attack",
     "id": 9,
+    "playlistIndex": 9,
     "toadsDestroyed": 1,
     "gameOver": false,
     "controlTime": [
@@ -255,12 +253,12 @@
         "options": [
           {
             "name": "Persuade the cop",
-            "scene": "scene_10",
+            "scene": 10,
             "button": "a"
           },
           {
             "name": "Screw da law, run Mario!",
-            "scene": "scene_11",
+            "scene": 11,
             "button": "z"
           }
         ]
@@ -271,6 +269,7 @@
     "videoId": "XCh7b7LzF5w",
     "name": "Persuade the cop",
     "id": 10,
+    "playlistIndex": 10,
     "toadsDestroyed": 0,
     "gameOver": true,
     "controlTime": [
@@ -291,6 +290,7 @@
     "videoId": "BqGTJjel3VQ",
     "name": "DRIVE MARIO! DRIVE!!",
     "id": 11,
+    "playlistIndex": -1,
     "toadsDestroyed": 0,
     "gameOver": false,
     "controlTime": [
@@ -300,7 +300,7 @@
         "options": [
           {
             "name": "OH GOD MARIO! WATCH OUT!",
-            "scene": "scene_14",
+            "scene": 14,
             "button": "a"
           }
         ]
@@ -311,12 +311,12 @@
         "options": [
           {
             "name": "help the poor lady",
-            "scene": "scene_15",
+            "scene": 15,
             "button": "a"
           },
           {
             "name": "Screw that! I got princesses to save!",
-            "scene": "scene_16",
+            "scene": 16,
             "button": "b"
           }
         ]
@@ -327,6 +327,7 @@
     "videoId": "-6Ib9Rgxg78",
     "name": "Feed him mushrooms",
     "id": 12,
+    "playlistIndex": 13,
     "toadsDestroyed": 0,
     "gameOver": true,
     "controlTime": [
@@ -336,7 +337,7 @@
         "options": [
           {
             "name": "Might wanna go back a video",
-            "scene": "scene_06",
+            "scene": 6,
             "button": "none"
           }
         ]
@@ -347,6 +348,7 @@
     "videoId": "MydKdctpLg0",
     "name": "Feed him curry",
     "id": 13,
+    "playlistIndex": 14,
     "toadsDestroyed": 0,
     "gameOver": false,
     "controlTime": [
@@ -356,12 +358,12 @@
         "options": [
           {
             "name": "help the poor lady",
-            "scene": "scene_15",
+            "scene": 15,
             "button": "a"
           },
           {
             "name": "Screw that! I got princesses to save!",
-            "scene": "scene_16",
+            "scene": 16,
             "button": "b"
           }
         ]
@@ -372,6 +374,7 @@
     "videoId": "1nqGGHHzcE0",
     "name": "MARIO WATCH OUT!",
     "id": 14,
+    "playlistIndex": 11,
     "toadsDestroyed": 0,
     "gameOver": true,
     "controlTime": [
@@ -381,7 +384,7 @@
         "options": [
           {
             "name": "let him crash!!",
-            "scene": "scene_11",
+            "scene": 11,
             "button": "none"
           }
         ]
@@ -392,6 +395,7 @@
     "videoId": "Sze3VFMOCJI",
     "name": "Help the poor lady",
     "id": 15,
+    "playlistIndex": 15,
     "toadsDestroyed": 0,
     "gameOver": false,
     "controlTime": [
@@ -401,17 +405,17 @@
         "options": [
           {
             "name": "do the safety dance",
-            "scene": "scene_17",
+            "scene": 17,
             "button": "left"
           },
           {
             "name": "use the stick!",
-            "scene": "scene_18",
+            "scene": 18,
             "button": "down"
           },
           {
             "name": "throw crap at it",
-            "scene": "scene_19",
+            "scene": 19,
             "button": "right"
           }
         ]
@@ -422,6 +426,7 @@
     "videoId": "9GxqrAP7ejI",
     "name": "Screw that! i got princesses to save!",
     "id": 16,
+    "playlistIndex": 16,
     "toadsDestroyed": 0,
     "gameOver": false,
     "controlTime": [
@@ -431,12 +436,12 @@
         "options": [
           {
             "name": "do the safety dance",
-            "scene": "scene_17",
+            "scene": 17,
             "button": "left"
           },
           {
             "name": "throw crap at it",
-            "scene": "scene_19",
+            "scene": 19,
             "button": "right"
           }
         ]
@@ -447,6 +452,7 @@
     "videoId": "n7yX4Rcclrg",
     "name": "Do the Safety Dance!",
     "id": 17,
+    "playlistIndex": 19,
     "toadsDestroyed": 0,
     "gameOver": true,
     "controlTime": [
@@ -456,7 +462,7 @@
         "options": [
           {
             "name": "did you miss something",
-            "scene": "scene_15",
+            "scene": 15,
             "button": "none"
           }
         ]
@@ -467,6 +473,7 @@
     "videoId": "vmXK7qVBAUU",
     "name": "USE DA STICK!",
     "id": 18,
+    "playlistIndex": 17,
     "toadsDestroyed": 0,
     "gameOver": false,
     "controlTime": [
@@ -476,17 +483,17 @@
         "options": [
           {
             "name": "spaghetti!!!",
-            "scene": "scene_20",
+            "scene": 20,
             "button": "a"
           },
           {
             "name": "directions to bowser's castle",
-            "scene": "scene_21",
+            "scene": 21,
             "button": "b"
           },
           {
             "name": "shoot him in the face",
-            "scene": "scene_22",
+            "scene": 22,
             "button": "z"
           }
         ]
@@ -497,6 +504,7 @@
     "videoId": "7K57pw_d2Fw",
     "name": "Throw crap at it",
     "id": 19,
+    "playlistIndex": 18,
     "toadsDestroyed": 0,
     "gameOver": true,
     "controlTime": [
@@ -506,7 +514,7 @@
         "options": [
           {
             "name": "did you miss something",
-            "scene": "scene_15",
+            "scene": 15,
             "button": "none"
           }
         ]
@@ -517,6 +525,7 @@
     "videoId": "OJ-Z-Z9VF7g",
     "name": "CAN I HAVE Spaghetti!?",
     "id": 20,
+    "playlistIndex": 20,
     "toadsDestroyed": 0,
     "gameOver": true,
     "controlTime": [
@@ -526,7 +535,7 @@
         "options": [
           {
             "name": "no spaghetti! >:(",
-            "scene": "scene_18",
+            "scene": 18,
             "button": "none"
           }
         ]
@@ -537,6 +546,7 @@
     "videoId": "KJDx2Cd2rFc",
     "name": "Directions to bowser's castle",
     "id": 21,
+    "playlistIndex": 21,
     "toadsDestroyed": 0,
     "gameOver": false,
     "controlTime": [
@@ -546,12 +556,12 @@
         "options": [
           {
             "name": "get money from that koopa",
-            "scene": "scene_23",
+            "scene": 23,
             "button": "z"
           },
           {
             "name": "get money from the item block",
-            "scene": "scene_24",
+            "scene": 24,
             "button": "b"
           }
         ]
@@ -562,6 +572,7 @@
     "videoId": "ADFE2Qu7wLk",
     "name": "Shoot him in the face",
     "id": 22,
+    "playlistIndex": 22,
     "toadsDestroyed": 1,
     "gameOver": false,
     "controlTime": [
@@ -571,12 +582,12 @@
         "options": [
           {
             "name": "get money from that koopa",
-            "scene": "scene_23",
+            "scene": 23,
             "button": "z"
           },
           {
             "name": "get money from the item block",
-            "scene": "scene_24",
+            "scene": 24,
             "button": "b"
           }
         ]
@@ -587,6 +598,7 @@
     "videoId": "omyPLJs75Tg",
     "name": "Get money from the koopa",
     "id": 23,
+    "playlistIndex": 24,
     "toadsDestroyed": 0,
     "gameOver": false,
     "controlTime": [
@@ -596,12 +608,12 @@
         "options": [
           {
             "name": "\"you're not fat! look at how fat i am!\" (show your fat)",
-            "scene": "scene_25",
+            "scene": 25,
             "button": "down"
           },
           {
             "name": "Stomp on the koopa and take the coin",
-            "scene": "scene_26",
+            "scene": 26,
             "button": "up"
           }
         ]
@@ -612,6 +624,7 @@
     "videoId": "MKuoz2Bxyys",
     "name": "Get money from the block!",
     "id": 24,
+    "playlistIndex": 23,
     "toadsDestroyed": 0,
     "gameOver": true,
     "controlTime": [
@@ -621,7 +634,7 @@
         "options": [
           {
             "name": "even block have feelings...",
-            "scene": "scene_21",
+            "scene": 21,
             "button": "none"
           }
         ]
@@ -632,6 +645,7 @@
     "videoId": "dt_in6jQItg",
     "name": "Show how fat you are",
     "id": 25,
+    "playlistIndex": 25,
     "toadsDestroyed": 0,
     "gameOver": true,
     "controlTime": [
@@ -641,7 +655,7 @@
         "options": [
           {
             "name": "put your clothes back on!",
-            "scene": "scene_23",
+            "scene": 23,
             "button": "none"
           }
         ]
@@ -652,6 +666,7 @@
     "videoId": "C9mfk9aj0Fs",
     "name": "Stomp the koopa and take the coin",
     "id": 26,
+    "playlistIndex": 26,
     "toadsDestroyed": 0,
     "gameOver": false,
     "controlTime": [
@@ -661,18 +676,18 @@
         "options": [
           {
             "name": "spaghetti shop",
-            "scene": "none",
+            "scene": -1,
             "button": "none",
             "text": "Buy the spaghetti DLC 599$!"
           },
           {
             "name": "Port penguz",
-            "scene": "scene_27",
+            "scene": 27,
             "button": "none"
           },
           {
             "name": "Mario bros. house",
-            "scene": "scene_28",
+            "scene": 28,
             "button": "none"
           }
         ]
@@ -683,6 +698,7 @@
     "videoId": "Ai0eoFVa56w",
     "name": " Go to Port Penguz",
     "id": 27,
+    "playlistIndex": 28,
     "toadsDestroyed": 0,
     "gameOver": false,
     "controlTime": [
@@ -692,22 +708,22 @@
         "options": [
           {
             "name": "spaghetti",
-            "scene": "scene_29",
+            "scene": 29,
             "button": "a"
           },
           {
             "name": "Super Smash 360 Noscope Attack",
-            "scene": "scene_30",
+            "scene": 30,
             "button": "b"
           },
           {
             "name": "punch",
-            "scene": "scene_31",
+            "scene": 31,
             "button": "z"
           },
           {
             "name": "Scare",
-            "scene": "scene_32",
+            "scene": 32,
             "button": "right"
           }
         ]
@@ -718,6 +734,7 @@
     "videoId": "jasBSxYYemQ",
     "name": "Go to the Mario bros house",
     "id": 28,
+    "playlistIndex": 27,
     "toadsDestroyed": 0,
     "gameOver": true,
     "controlTime": [
@@ -727,7 +744,7 @@
         "options": [
           {
             "name": "better off not going back home",
-            "scene": "scene_26",
+            "scene": 26,
             "button": "none"
           }
         ]
@@ -738,6 +755,7 @@
     "videoId": "sY5FWXeH0_U",
     "name": "Use the SPAGHETTI!",
     "id": 29,
+    "playlistIndex": 32,
     "toadsDestroyed": 0,
     "gameOver": false,
     "controlTime": [
@@ -747,7 +765,7 @@
         "options": [
           {
             "name": "Eat that spicy spaghetti",
-            "scene": "scene_33",
+            "scene": 33,
             "button": "none"
           }
         ]
@@ -758,12 +776,12 @@
         "options": [
           {
             "name": "go after that guy you saw before",
-            "scene": "scene_34",
+            "scene": 34,
             "button": "left"
           },
           {
             "name": "go get a free boat! and go to the lair!",
-            "scene": "scene_35",
+            "scene": 35,
             "button": "right"
           }
         ]
@@ -1043,10 +1061,10 @@
       }
     ]
   },
-  "scene_41": {
+  "scene_42": {
     "videoId": "u1ABiTfGw_s",
     "name": "Waluigi Picture",
-    "id": 41,
+    "id": 42,
     "playlistIndex": 43,
     "toadsDestroyed": 0,
     "gameOver": false,
@@ -1055,15 +1073,29 @@
         "timeStampStart": "0:35",
         "timeStampEnd": "inf",
         "options": [
-
+          {
+            "name": "be a badass and rek em",
+            "scene": "scene_44",
+            "button": "a"
+          },
+          {
+            "name": "make a distraction",
+            "scene": "scene_45",
+            "button": "z"
+          },
+          {
+            "name": "disguise as enemy",
+            "scene": "scene_46",
+            "button": "b"
+          }
         ]
       }
     ]
   },
-  "scene_42": {
+  "scene_43": {
     "videoId": "ufnnPoH0UYM",
     "name": "Waluigi Launcher time",
-    "id": 42,
+    "id": 43,
     "playlistIndex": 42,
     "toadsDestroyed": 0,
     "gameOver": true,
