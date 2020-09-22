@@ -279,7 +279,7 @@
         "options": [
           {
             "name": "re-evaluate your life",
-            "scene": "scene_05",
+            "scene": 5,
             "button": "none"
           }
         ]
@@ -792,6 +792,7 @@
     "videoId": "fbHt1cp1qnw",
     "name": "SUPER SMASH 360 NOSCOPE PINGAS ATTACK",
     "id": 30,
+    "playlistIndex": 31,
     "toadsDestroyed": 0,
     "gameOver": true,
     "controlTime": [
@@ -801,7 +802,7 @@
         "options": [
           {
             "name": "Rematch",
-            "scene": "scene_27",
+            "scene": 27,
             "button": "none"
           }
         ]
@@ -812,6 +813,7 @@
     "videoId": "zjEAldi83gs",
     "name": "Punch them",
     "id": 31,
+    "playlistIndex": 30,
     "toadsDestroyed": 0,
     "gameOver": true,
     "controlTime": [
@@ -821,7 +823,7 @@
         "options": [
           {
             "name": "Rematch",
-            "scene": "scene_27",
+            "scene": 27,
             "button": "none"
           }
         ]
@@ -832,6 +834,7 @@
     "videoId": "3PJNnUQLFaw",
     "name": "Be scary",
     "id": 32,
+    "playlistIndex": 29,
     "toadsDestroyed": 0,
     "gameOver": true,
     "controlTime": [
@@ -841,7 +844,7 @@
         "options": [
           {
             "name": "Rematch",
-            "scene": "scene_27",
+            "scene": 27,
             "button": "none"
           }
         ]
@@ -852,6 +855,7 @@
     "videoId": "NjbW5nzn7eU",
     "name": "Eat that spicy spaghetti!",
     "id": 33,
+    "playlistIndex": 33,
     "toadsDestroyed": 1,
     "gameOver": false,
     "controlTime": [
@@ -861,12 +865,12 @@
         "options": [
           {
             "name": "go after that guy you saw before",
-            "scene": "scene_34",
+            "scene": 34,
             "button": "left"
           },
           {
             "name": "go get a free boat! and go to the lair!",
-            "scene": "scene_35",
+            "scene": 35,
             "button": "right"
           }
         ]
@@ -887,17 +891,17 @@
         "options": [
           {
             "name": "sing the pirate song",
-            "scene": "scene_36",
+            "scene": 36,
             "button": "a"
           },
           {
             "name": "talk about pirate adventure",
-            "scene": "scene_37",
+            "scene": 37,
             "button": "z"
           },
           {
             "name": "show them yee pirate booty",
-            "scene": "scene_38",
+            "scene": 38,
             "button": "b"
           }
         ]
@@ -918,7 +922,7 @@
         "options": [
           {
             "name": "you need a bigger boat!",
-            "scene": "scene_29",
+            "scene": 29,
             "button": "none"
           }
         ]
@@ -939,7 +943,7 @@
         "options": [
           {
             "name": "be more convincing!",
-            "scene": "scene_34",
+            "scene": 34,
             "button": "none"
           }
         ]
@@ -960,7 +964,7 @@
         "options": [
           {
             "name": "be more convincing!",
-            "scene": "scene_34",
+            "scene": 34,
             "button": "none"
           }
         ]
@@ -981,12 +985,12 @@
         "options": [
           {
             "name": "It was the fox",
-            "scene": "scene_39",
+            "scene": 39,
             "button": "a"
           },
           {
             "name": "It was the shay guy",
-            "scene": "scene_40",
+            "scene": 40,
             "button": "b"
           }
         ]
@@ -997,17 +1001,17 @@
         "options": [
           {
             "name": "It was the fox",
-            "scene": "scene_39",
+            "scene": 39,
             "button": "a"
           },
           {
             "name": "It was the shay guy",
-            "scene": "scene_40",
+            "scene": 40,
             "button": "b"
           },
           {
             "name": "TOAD",
-            "scene": "scene_41",
+            "scene": 41,
             "button": "none"
           }
         ]
@@ -1028,7 +1032,7 @@
         "options": [
           {
             "name": "try again, without the vomiting",
-            "scene": "scene_38",
+            "scene": 38,
             "button": "none"
           }
         ]
@@ -1049,13 +1053,39 @@
         "options": [
           {
             "name": "Waluigi picture",
-            "scene": "scene_42",
+            "scene": 42,
             "button": "down"
           },
           {
             "name": "Waluigi launcher",
-            "scene": "scene_43",
+            "scene": 43,
             "button": "up"
+          }
+        ]
+      }
+    ]
+  },
+  "scene_41": {
+    "videoId": "8B-p-ABcI50",
+    "name": "TOAD ABOARD!!!",
+    "id": 41,
+    "playlistIndex": 39,
+    "toadsDestroyed": 1,
+    "gameOver": false,
+    "controlTime": [
+      {
+        "timeStampStart": "0:17",
+        "timeStampEnd": "inf",
+        "options": [
+          {
+            "name": "It was the fox",
+            "scene": 39,
+            "button": "a"
+          },
+          {
+            "name": "It was the shay guy",
+            "scene": 40,
+            "button": "b"
           }
         ]
       }
@@ -1075,17 +1105,17 @@
         "options": [
           {
             "name": "be a badass and rek em",
-            "scene": "scene_44",
+            "scene": 44,
             "button": "a"
           },
           {
             "name": "make a distraction",
-            "scene": "scene_45",
+            "scene": 45,
             "button": "z"
           },
           {
             "name": "disguise as enemy",
-            "scene": "scene_46",
+            "scene": 46,
             "button": "b"
           }
         ]
@@ -1106,7 +1136,222 @@
         "options": [
           {
             "name": "not waluigi time",
-            "scene": "scene_40",
+            "scene": 40,
+            "button": "none"
+          }
+        ]
+      }
+    ]
+  },
+  "scene_44": {
+    "videoId": "DbphrB1PxF8",
+    "name": "BE A BADASS! AND REK EVERYONE!",
+    "id": 44,
+    "playlistIndex": 45,
+    "toadsDestroyed": 0,
+    "gameOver": true,
+    "controlTime": [
+      {
+        "timeStampStart": "0:40",
+        "timeStampEnd": "inf",
+        "options": [
+          {
+            "name": "cmon stealthy mario!",
+            "scene": 42,
+            "button": "none"
+          }
+        ]
+      }
+    ]
+  },
+  "scene_45": {
+    "videoId": "FpSd4JVn8O0",
+    "name": "Make a distraction",
+    "id": 45,
+    "playlistIndex": 44,
+    "toadsDestroyed": 1,
+    "gameOver": true,
+    "controlTime": [
+      {
+        "timeStampStart": "0:40",
+        "timeStampEnd": "inf",
+        "options": [
+          {
+            "name": "cmon! stealth mario!",
+            "scene": 42,
+            "button": "none"
+          }
+        ]
+      }
+    ]
+  },
+  "scene_46": {
+    "videoId": "YvcsUUDvjg4",
+    "name": "Use a disguise",
+    "id": 46,
+    "playlistIndex": 46,
+    "toadsDestroyed": 0,
+    "gameOver": false,
+    "controlTime": [
+      {
+        "timeStampStart": "0:19",
+        "timeStampEnd": "inf",
+        "options": [
+          {
+            "name": "Imma selling cookies",
+            "scene": 47,
+            "button": "b"
+          },
+          {
+            "name": "run for the door",
+            "scene": 48,
+            "button": "z"
+          }
+        ]
+      }
+    ]
+  },
+  "scene_47": {
+    "videoId": "piEeL4OOdok",
+    "name": "Sell cookies",
+    "id": 47,
+    "playlistIndex": 47,
+    "toadsDestroyed": 0,
+    "gameOver": true,
+    "controlTime": [
+      {
+        "timeStampStart": "0:28",
+        "timeStampEnd": "inf",
+        "options": [
+          {
+            "name": "no cookies! >:(",
+            "scene": 46,
+            "button": "none"
+          }
+        ]
+      }
+    ]
+  },
+  "scene_48": {
+    "videoId": "Amnaiw6-Y2A",
+    "name": "RUN!!!",
+    "id": 48,
+    "playlistIndex": 48,
+    "toadsDestroyed": 0,
+    "gameOver": true,
+    "controlTime": [
+      {
+        "timeStampStart": "0:11",
+        "timeStampEnd": "0:13",
+        "options": [
+          {
+            "name": "dodge Steve",
+            "scene": 49,
+            "button": "a"
+          }
+        ]
+      },
+      {
+        "timeStampStart": "0:32",
+        "timeStampEnd": "inf",
+        "options": [
+          {
+            "name": "think quickly!",
+            "scene": 48,
+            "button": "none"
+          }
+        ]
+      }
+    ]
+  },
+  "scene_49": {
+    "videoId": "AniY67EPCQk",
+    "name": "Dodge steve",
+    "id": 49,
+    "playlistIndex": 49,
+    "toadsDestroyed": 0,
+    "gameOver": false,
+    "controlTime": [
+      {
+        "timeStampStart": "0:30",
+        "timeStampEnd": "inf",
+        "options": [
+          {
+            "name": "take a chance. use the random item block.",
+            "scene": 50,
+            "button": "b"
+          },
+          {
+            "name": "use the mega mushroom",
+            "scene": 51,
+            "button": "a"
+          }
+        ]
+      }
+    ]
+  },
+  "scene_50": {
+    "videoId": "tjJWRLJBtSw",
+    "name": "Take a chance. Use the Item block.",
+    "id": 50,
+    "playlistIndex": 51,
+    "toadsDestroyed": 0,
+    "gameOver": true,
+    "controlTime": [
+      {
+        "timeStampStart": "0:46",
+        "timeStampEnd": "0:51",
+        "options": [
+          {
+            "name": "white.",
+            "scene": 52,
+            "button": "left"
+          },
+          {
+            "name": "blue",
+            "scene": 53,
+            "button": "down"
+          },
+          {
+            "name": "green",
+            "scene": 54,
+            "button": "up"
+          },
+          {
+            "name": "red",
+            "scene": 55,
+            "button": "right"
+          }
+        ]
+      },
+      {
+        "timeStampStart": "1:08",
+        "timeStampEnd": "inf",
+        "options": [
+          {
+            "name": "decisions, decisions",
+            "scene": 50,
+            "button": "none"
+          }
+        ]
+      }
+    ]
+  },
+  "scene_51": {
+    "videoId": "mZ7uQ0RACLw",
+    "name": "Use the Mega Mushroom",
+    "id": 51,
+    "playlistIndex": 50,
+    "toadsDestroyed": 0,
+    "gameOver": true,
+    "controlTime": [
+      {
+        "timeStampStart": "0:30",
+        "timeStampEnd": "inf",
+        "options": [
+          {
+            "name": "enough of games!",
+            "scene": 50,
             "button": "none"
           }
         ]
