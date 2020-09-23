@@ -1351,11 +1351,105 @@
         "options": [
           {
             "name": "enough of games!",
+            "scene": 49,
+            "button": "none"
+          }
+        ]
+      }
+    ]
+  },
+  "scene_52": {
+    "videoId": "-1m35zNXspg",
+    "name": "The white button",
+    "id": 52,
+    "playlistIndex": 53,
+    "toadsDestroyed": 0,
+    "gameOver": true,
+    "controlTime": [
+      {
+        "timeStampStart": "0:30",
+        "timeStampEnd": "inf",
+        "options": [
+          {
+            "name": "try again!",
             "scene": 50,
             "button": "none"
           }
         ]
       }
+    ]
+  },
+  "scene_53": {
+    "videoId": "jDR73mU96uM",
+    "name": "The blue button",
+    "id": 53,
+    "playlistIndex": 55,
+    "toadsDestroyed": 0,
+    "gameOver": false,
+    "controlTime": [
+      {
+        "timeStampStart": "0:54",
+        "timeStampEnd": "inf",
+        "options": [
+          {
+            "name": "beat the game",
+            "scene": 56,
+            "button": "a"
+          }
+        ]
+      }
+    ]
+  },
+  "scene_54": {
+    "videoId": "9xOtb-Mo380",
+    "name": "The green button",
+    "id": 54,
+    "playlistIndex": 54,
+    "toadsDestroyed": 0,
+    "gameOver": true,
+    "controlTime": [
+      {
+        "timeStampStart": "0:41",
+        "timeStampEnd": "inf",
+        "options": [
+          {
+            "name": "try again!",
+            "scene": 50,
+            "button": "none"
+          }
+        ]
+      }
+    ]
+  },
+  "scene_55": {
+    "videoId": "TDXQEjZIXQ4",
+    "name": "The red button",
+    "id": 55,
+    "playlistIndex": 52,
+    "toadsDestroyed": 2,
+    "gameOver": true,
+    "controlTime": [
+      {
+        "timeStampStart": "0:28",
+        "timeStampEnd": "inf",
+        "options": [
+          {
+            "name": "try again!",
+            "scene": 50,
+            "button": "none"
+          }
+        ]
+      }
+    ]
+  },
+  "scene_final": {
+    "videoId": "7XkYBHm45oU",
+    "name": "Beat the game",
+    "id": 56,
+    "playlistIndex": 56,
+    "toadsDestroyed": 1,
+    "gameOver": true,
+    "controlTime": [
     ]
   }
 }
