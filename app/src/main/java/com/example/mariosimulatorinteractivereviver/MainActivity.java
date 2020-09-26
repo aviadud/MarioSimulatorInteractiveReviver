@@ -1,13 +1,11 @@
 package com.example.mariosimulatorinteractivereviver;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 
-import com.example.mariosimulatorinteractivereviver.tools.DataLoader;
+import com.example.mariosimulatorinteractivereviver.utilities.DataLoader;
 import com.google.android.youtube.player.YouTubeBaseActivity;
 import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubePlayer;

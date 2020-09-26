@@ -14,7 +14,7 @@
           {
             "name": "Eat some spaghetti",
             "scene": 1,
-            "button": "arrowUp"
+            "button": "up"
           },
           {
             "name": "Get that MOFO",
@@ -24,7 +24,7 @@
           {
             "name": "Get another princess",
             "scene": 3,
-            "button": "arrowRight"
+            "button": "right"
           }
         ]
       }
