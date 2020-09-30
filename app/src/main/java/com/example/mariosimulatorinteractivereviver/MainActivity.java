@@ -6,6 +6,7 @@ import android.widget.Button;
 import android.widget.RelativeLayout;
 
 import com.example.mariosimulatorinteractivereviver.utilities.DataLoader;
+import com.example.mariosimulatorinteractivereviver.utilities.NavigationDataBase;
 import com.google.android.youtube.player.YouTubeBaseActivity;
 import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubePlayer;
@@ -16,6 +17,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class MainActivity extends YouTubeBaseActivity {
     private static final String TAG = MainActivity.class.getSimpleName();
@@ -23,8 +25,8 @@ public class MainActivity extends YouTubeBaseActivity {
     private YouTubePlayerView mYouTubePlayerView;
     private YouTubePlayer mYouTubePlayer;
     private RelativeLayout buttonsLayout;
-    private JSONObject database;
-    private JSONObject sceneData;
+    private NavigationDataBase navigationDataBase;
+    private NavigationDataBase.Scene currentScene;
 
     private String currentVideoId;
     private int currentTimeStamp;
@@ -40,11 +42,11 @@ public class MainActivity extends YouTubeBaseActivity {
         currentTimeStamp = 0; //remove later
 
         try {
-            database = new JSONObject(DataLoader.JsonFilePathToString(getResources().openRawResource(R.raw.simulator_navigation)));
-            sceneData = database.getJSONObject(getString(R.string.database_entry_point));
-            currentVideoId = sceneData.getString(getString(R.string.database_video_id_key));
-        }
-        catch (IOException | JSONException ex){
+            JSONObject databaseJson = new JSONObject(DataLoader.JsonFilePathToString(getResources().openRawResource(R.raw.simulator_navigation)));
+            navigationDataBase = new NavigationDataBase(databaseJson);
+            currentScene = navigationDataBase.getScene(0);
+            currentVideoId = currentScene.getVideoId();
+        } catch (IOException | JSONException ex) {
             ex.printStackTrace();
             Log.d(TAG, "Can't load database");
         }
@@ -64,9 +66,9 @@ public class MainActivity extends YouTubeBaseActivity {
             }
         });
 
-        try {
-            JSONArray jsonArray = sceneData.getJSONArray("controlTime");
-            for (int i=0;i < jsonArray.length(); i++){
+        ArrayList<NavigationDataBase.Scene.ControlTime> controlTimes = currentScene.getControlTimes();
+        for (int i = 0; i < controlTimes.size(); i++) {
+                /*
                 JSONObject currentControlTime = jsonArray.getJSONObject(i);
                 JSONArray buttonsNames = currentControlTime.getJSONArray("options");
                 for (int j=0; j < buttonsNames.length(); j++){
@@ -76,10 +78,7 @@ public class MainActivity extends YouTubeBaseActivity {
                             RelativeLayout.LayoutParams.WRAP_CONTENT);
                     buttonsLayout.addView(currentButton, buttonLayoutParams);
                 }
-            }
-        }
-        catch (JSONException ex){
-
+                 */
         }
 
     }
