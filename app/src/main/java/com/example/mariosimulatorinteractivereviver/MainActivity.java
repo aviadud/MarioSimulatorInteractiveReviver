@@ -63,22 +63,21 @@ public class MainActivity extends YouTubeBaseActivity {
         try {
             JSONObject databaseJson = new JSONObject(DataLoader.jsonFilePathToString(getResources().openRawResource(R.raw.simulator_navigation)));
             navigationDataBase = new NavigationDataBase(databaseJson);
-            int sceneId = 0;
-            if (savedInstanceState != null){
+            int sceneId = 50;
+            if (savedInstanceState != null) {
                 sceneId = savedInstanceState.getInt("currentSceneId");
             }
             currentScene = navigationDataBase.getScene(sceneId);
             currentVideoId = currentScene.getVideoId();
             if (savedInstanceState != null) {
                 currentTimeStamp = savedInstanceState.getInt("currentTimeStamp");
-            }
-            else{
+            } else {
                 currentTimeStamp = 0;
             }
             currentControlTimeIndex = 0;
             currentControlTime = currentScene.getControlTimes().get(currentControlTimeIndex);
             actionTime = currentControlTime.getTimeStampStart() <= currentTimeStamp;
-            if (actionTime){
+            if (actionTime) {
                 optionsButtons = addOptionsButtons(currentControlTime);
             }
         } catch (IOException | JSONException ex) {
@@ -140,11 +139,11 @@ public class MainActivity extends YouTubeBaseActivity {
     @Override
     protected void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
-        if (currentScene != null && youTubePlayerInitiated){
+        if (currentScene != null && youTubePlayerInitiated) {
             outState.putInt("currentSceneId", currentScene.getId());
             outState.putInt("currentTimeStamp", mYouTubePlayer.getCurrentTimeMillis());
         }
-        if (optionsButtons != null){
+        if (optionsButtons != null) {
             removeOptionsButtons();
         }
     }
@@ -155,7 +154,7 @@ public class MainActivity extends YouTubeBaseActivity {
             // remove buttons if the current video time is out of range of current time control.
             if (actionTime &&
                     (currentTimeMillis < currentControlTime.getTimeStampStart() ||
-                            (currentControlTime.getTimeStampEnd() != NavigationDataBase.Scene.ControlTime.END_OF_VIDEO_TIME_STAMP && currentControlTime.getTimeStampEnd() <= currentTimeMillis))){
+                            (currentControlTime.getTimeStampEnd() != NavigationDataBase.Scene.ControlTime.END_OF_VIDEO_TIME_STAMP && currentControlTime.getTimeStampEnd() <= currentTimeMillis))) {
                 removeOptionsButtons();
                 actionTime = false;
             }
@@ -165,7 +164,7 @@ public class MainActivity extends YouTubeBaseActivity {
                 if (controlTime.getTimeStampStart() <= currentTimeMillis &&
                         (currentTimeMillis < controlTime.getTimeStampEnd() ||
                                 controlTime.getTimeStampEnd() == NavigationDataBase.Scene.ControlTime.END_OF_VIDEO_TIME_STAMP)) {
-                    if(!currentControlTime.equals(controlTime) || !actionTime) {
+                    if (!currentControlTime.equals(controlTime) || !actionTime) {
                         actionTime = true;
                         currentControlTime = controlTime;
                         optionsButtons = addOptionsButtons(currentControlTime);
@@ -176,10 +175,10 @@ public class MainActivity extends YouTubeBaseActivity {
         }
     }
 
-    private void loadScene(int sceneId){
-        if (navigationDataBase != null && youTubePlayerInitiated){
-            if (0 <= sceneId && sceneId < navigationDataBase.getNumberOfScenes()){
-                if (optionsButtons != null){
+    private void loadScene(int sceneId) {
+        if (navigationDataBase != null && youTubePlayerInitiated) {
+            if (0 <= sceneId && sceneId < navigationDataBase.getNumberOfScenes()) {
+                if (optionsButtons != null) {
                     removeOptionsButtons();
                 }
                 currentScene = navigationDataBase.getScene(sceneId);
@@ -189,31 +188,29 @@ public class MainActivity extends YouTubeBaseActivity {
                 currentControlTimeIndex = 0;
                 currentControlTime = currentScene.getControlTimes().get(currentControlTimeIndex);
                 actionTime = currentControlTime.getTimeStampStart() <= currentTimeStamp;
-                if (actionTime){
+                if (actionTime) {
                     optionsButtons = addOptionsButtons(currentControlTime);
                 }
-            }
-            else {
+            } else {
                 Log.d(TAG, "Invalid scene ID given to load");
             }
-        }
-        else {
+        } else {
             Log.d(TAG, "can't load scene/video because Navigation DataBase or YouTubePlayer aren't initiated");
         }
     }
 
 
-    private ArrayList<Button> addOptionsButtons(final NavigationDataBase.Scene.ControlTime controlTime){
+    private ArrayList<Button> addOptionsButtons(final NavigationDataBase.Scene.ControlTime controlTime) {
         int marginInPixels = getResources().getDimensionPixelSize(R.dimen.button_margin);
         ArrayList<Button> result = new ArrayList<>(controlTime.getNumberOfOptions());
         int numberOfButtons = controlTime.getNumberOfOptions();
         int buttonsInRow = numberOfButtons;
         Button currentButton;
-        if (numberOfButtons > BUTTONS_IN_ROW_LIMIT){
+        if (numberOfButtons >= BUTTONS_IN_ROW_LIMIT) {
             buttonsInRow = numberOfButtons / 2;
         }
         for (int i = 0; i < numberOfButtons; i++) {
-            if (i == 0){
+            if (i == 0) {
                 currentButton = findViewById(R.id.optionButton1);
                 currentButton.setVisibility(View.VISIBLE);
                 currentButton.setOnClickListener(new View.OnClickListener() {
@@ -222,26 +219,24 @@ public class MainActivity extends YouTubeBaseActivity {
                         loadScene(controlTime.getOptionSceneId(0));
                     }
                 });
-            }
-            else
-            {
+            } else {
                 currentButton = new Button(this);
                 currentButton.setId(i);
                 RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
                 layoutParams.setMargins(marginInPixels, marginInPixels, marginInPixels, marginInPixels);
                 if (i == 1) {
                     layoutParams.addRule(RelativeLayout.RIGHT_OF, R.id.optionButton1);
-                }
-                else{
+                } else {
                     if (i < buttonsInRow) {
                         layoutParams.addRule(RelativeLayout.RIGHT_OF, i - 1);
-                    }
-                    else {
+                    } else {
                         if (i == buttonsInRow) {
                             layoutParams.addRule(RelativeLayout.BELOW, R.id.optionButton1);
+                            layoutParams.addRule(RelativeLayout.ALIGN_PARENT_LEFT, RelativeLayout.TRUE);
                         }
                         else{
-                            layoutParams.addRule(RelativeLayout.BELOW, i%2);
+                            layoutParams.addRule(RelativeLayout.RIGHT_OF, i - 1);
+                            layoutParams.addRule(RelativeLayout.BELOW, R.id.optionButton1);
                         }
                     }
                 }
@@ -259,14 +254,13 @@ public class MainActivity extends YouTubeBaseActivity {
         return result;
     }
 
-    private void removeOptionsButtons(){
+    private void removeOptionsButtons() {
         if (optionsButtons != null) {
             for (Button button : optionsButtons) {
-                if (button.getId() == R.id.optionButton1){
+                if (button.getId() == R.id.optionButton1) {
                     button.setText("");
                     button.setVisibility(View.INVISIBLE);
-                }
-                else {
+                } else {
                     buttonsLayout.removeView(button);
                 }
             }
