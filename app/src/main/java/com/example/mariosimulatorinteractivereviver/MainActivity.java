@@ -63,7 +63,7 @@ public class MainActivity extends YouTubeBaseActivity {
         try {
             JSONObject databaseJson = new JSONObject(DataLoader.jsonFilePathToString(getResources().openRawResource(R.raw.simulator_navigation)));
             navigationDataBase = new NavigationDataBase(databaseJson);
-            int sceneId = 50;
+            int sceneId = 0;
             if (savedInstanceState != null) {
                 sceneId = savedInstanceState.getInt("currentSceneId");
             }
