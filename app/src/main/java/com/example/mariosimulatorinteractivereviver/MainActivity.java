@@ -3,8 +3,11 @@ package com.example.mariosimulatorinteractivereviver;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
+
+import androidx.annotation.NonNull;
 
 import com.example.mariosimulatorinteractivereviver.utilities.DataLoader;
 import com.example.mariosimulatorinteractivereviver.utilities.NavigationDataBase;
@@ -57,9 +60,18 @@ public class MainActivity extends YouTubeBaseActivity {
         try {
             JSONObject databaseJson = new JSONObject(DataLoader.jsonFilePathToString(getResources().openRawResource(R.raw.simulator_navigation)));
             navigationDataBase = new NavigationDataBase(databaseJson);
-            currentScene = navigationDataBase.getScene(0);
+            int sceneId = 0;
+            if (savedInstanceState != null){
+                sceneId = savedInstanceState.getInt("currentSceneId");
+            }
+            currentScene = navigationDataBase.getScene(sceneId);
             currentVideoId = currentScene.getVideoId();
-            currentTimeStamp = 0;
+            if (savedInstanceState != null) {
+                currentTimeStamp = savedInstanceState.getInt("currentTimeStamp");
+            }
+            else{
+                currentTimeStamp = 0;
+            }
             currentControlTimeIndex = 0;
             currentControlTime = currentScene.getControlTimes().get(currentControlTimeIndex);
             actionTime = currentControlTime.getTimeStampStart() <= currentTimeStamp;
@@ -80,6 +92,7 @@ public class MainActivity extends YouTubeBaseActivity {
                 mYouTubePlayer.loadVideo(currentVideoId, currentTimeStamp);
                 mYouTubePlayer.setPlaybackEventListener(playbackEventListener);
                 updateButtonsLayout();
+                timerHandler.postDelayed(timerRunnable, TIMER_DELAY_MILLIS);
             }
 
             @Override
@@ -120,6 +133,21 @@ public class MainActivity extends YouTubeBaseActivity {
 
     }
 
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        if (currentScene != null && mYouTubePlayer != null){
+            outState.putInt("currentSceneId", currentScene.getId());
+            outState.putInt("currentTimeStamp", mYouTubePlayer.getCurrentTimeMillis());
+        }
+        if (optionsButtons != null){
+            for (Button button : optionsButtons) {
+                buttonsLayout.removeView(button);
+            }
+            optionsButtons = null;
+        }
+    }
+
     private void updateButtonsLayout() {
         if (mYouTubePlayer != null) {
             int currentTimeMillis = mYouTubePlayer.getCurrentTimeMillis();
@@ -132,7 +160,7 @@ public class MainActivity extends YouTubeBaseActivity {
                 }
                 actionTime = false;
             }
-            // check if
+            // check if the current video time is in some control time range and update.
             ArrayList<NavigationDataBase.Scene.ControlTime> controlTimes = currentScene.getControlTimes();
             for (NavigationDataBase.Scene.ControlTime controlTime : controlTimes) {
                 if (controlTime.getTimeStampStart() <= currentTimeMillis &&
@@ -142,6 +170,15 @@ public class MainActivity extends YouTubeBaseActivity {
                         actionTime = true;
                         currentControlTime = controlTime;
                         optionsButtons = DataLoader.addOptionsButtonsToLayout(currentControlTime, buttonsLayout, this);
+                        for(Button button: optionsButtons){
+                            button.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+                                    int buttonId = v.getId();
+                                    loadScene(currentControlTime.getOptionSceneId(buttonId));
+                                }
+                            });
+                        }
                     }
                     break;
                 }
@@ -154,8 +191,8 @@ public class MainActivity extends YouTubeBaseActivity {
             if (0 <= sceneId && sceneId < navigationDataBase.getNumberOfScenes()){
                 currentScene = navigationDataBase.getScene(sceneId);
                 currentVideoId = currentScene.getVideoId();
-                mYouTubePlayer.loadVideo(currentVideoId);
                 currentTimeStamp = 0;
+                mYouTubePlayer.loadVideo(currentVideoId, currentTimeStamp);
                 currentControlTimeIndex = 0;
                 currentControlTime = currentScene.getControlTimes().get(currentControlTimeIndex);
                 actionTime = currentControlTime.getTimeStampStart() <= currentTimeStamp;
@@ -173,5 +210,9 @@ public class MainActivity extends YouTubeBaseActivity {
 
     }
 
-
+    @Override
+    protected void onPause() {
+        super.onPause();
+        timerHandler.removeCallbacks(timerRunnable);
+    }
 }
