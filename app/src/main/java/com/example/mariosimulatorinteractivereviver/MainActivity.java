@@ -2,7 +2,6 @@ package com.example.mariosimulatorinteractivereviver;
 
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.Button;
 import android.widget.RelativeLayout;
 
 import com.example.mariosimulatorinteractivereviver.utilities.DataLoader;
@@ -12,7 +11,6 @@ import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubePlayer;
 import com.google.android.youtube.player.YouTubePlayerView;
 
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -39,13 +37,13 @@ public class MainActivity extends YouTubeBaseActivity {
         mYouTubePlayerView = findViewById(R.id.mainYoutubePlayerView);
         buttonsLayout = findViewById(R.id.buttonsView);
 
-        currentTimeStamp = 0; //remove later
 
         try {
-            JSONObject databaseJson = new JSONObject(DataLoader.JsonFilePathToString(getResources().openRawResource(R.raw.simulator_navigation)));
+            JSONObject databaseJson = new JSONObject(DataLoader.jsonFilePathToString(getResources().openRawResource(R.raw.simulator_navigation)));
             navigationDataBase = new NavigationDataBase(databaseJson);
             currentScene = navigationDataBase.getScene(0);
             currentVideoId = currentScene.getVideoId();
+            currentTimeStamp = 0;
         } catch (IOException | JSONException ex) {
             ex.printStackTrace();
             Log.d(TAG, "Can't load database");
