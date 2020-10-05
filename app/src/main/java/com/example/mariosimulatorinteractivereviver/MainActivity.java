@@ -26,6 +26,7 @@ import java.util.ArrayList;
 public class MainActivity extends YouTubeBaseActivity {
     private static final String TAG = MainActivity.class.getSimpleName();
     private static final int TIMER_DELAY_MILLIS = 250;
+    private static final int BUTTONS_IN_ROW_LIMIT = 4;
 
     private YouTubePlayerView mYouTubePlayerView;
     private YouTubePlayer mYouTubePlayer;
@@ -205,27 +206,54 @@ public class MainActivity extends YouTubeBaseActivity {
     private ArrayList<Button> addOptionsButtons(final NavigationDataBase.Scene.ControlTime controlTime){
         int marginInPixels = getResources().getDimensionPixelSize(R.dimen.button_margin);
         ArrayList<Button> result = new ArrayList<>(controlTime.getNumberOfOptions());
-        for (int i = 0; i < controlTime.getNumberOfOptions(); i++) {
-            Button currentButton = new Button(this);
-            currentButton.setId(i);
-            currentButton.setText(controlTime.getOptionButton(i));
-            currentButton.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    loadScene(controlTime.getOptionSceneId(v.getId()));
+        int numberOfButtons = controlTime.getNumberOfOptions();
+        int buttonsInRow = numberOfButtons;
+        Button currentButton;
+        if (numberOfButtons > BUTTONS_IN_ROW_LIMIT){
+            buttonsInRow = numberOfButtons / 2;
+        }
+        for (int i = 0; i < numberOfButtons; i++) {
+            if (i == 0){
+                currentButton = findViewById(R.id.optionButton1);
+                currentButton.setVisibility(View.VISIBLE);
+                currentButton.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        loadScene(controlTime.getOptionSceneId(0));
+                    }
+                });
+            }
+            else
+            {
+                currentButton = new Button(this);
+                currentButton.setId(i);
+                RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
+                layoutParams.setMargins(marginInPixels, marginInPixels, marginInPixels, marginInPixels);
+                if (i == 1) {
+                    layoutParams.addRule(RelativeLayout.RIGHT_OF, R.id.optionButton1);
                 }
-            });
-
-            RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
-            if (i == 0) {
-                layoutParams.addRule(RelativeLayout.ALIGN_PARENT_LEFT, RelativeLayout.TRUE);
+                else{
+                    if (i < buttonsInRow) {
+                        layoutParams.addRule(RelativeLayout.RIGHT_OF, i - 1);
+                    }
+                    else {
+                        if (i == buttonsInRow) {
+                            layoutParams.addRule(RelativeLayout.BELOW, R.id.optionButton1);
+                        }
+                        else{
+                            layoutParams.addRule(RelativeLayout.BELOW, i%2);
+                        }
+                    }
+                }
+                buttonsLayout.addView(currentButton, layoutParams);
+                currentButton.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        loadScene(controlTime.getOptionSceneId(v.getId()));
+                    }
+                });
             }
-            else{
-                layoutParams.addRule(RelativeLayout.RIGHT_OF, i-1);
-            }
-            //layoutParams.setMargins(marginInPixels, marginInPixels, marginInPixels, marginInPixels);
-
-            buttonsLayout.addView(currentButton, layoutParams);
+            currentButton.setText(controlTime.getOptionButton(i));
             result.add(currentButton);
         }
         return result;
@@ -234,7 +262,13 @@ public class MainActivity extends YouTubeBaseActivity {
     private void removeOptionsButtons(){
         if (optionsButtons != null) {
             for (Button button : optionsButtons) {
-                buttonsLayout.removeView(button);
+                if (button.getId() == R.id.optionButton1){
+                    button.setText("");
+                    button.setVisibility(View.INVISIBLE);
+                }
+                else {
+                    buttonsLayout.removeView(button);
+                }
             }
             optionsButtons = null;
         }
