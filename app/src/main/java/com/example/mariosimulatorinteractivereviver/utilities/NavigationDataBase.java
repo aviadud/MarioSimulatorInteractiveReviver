@@ -14,6 +14,8 @@ public class NavigationDataBase {
 
     public static class Scene {
         public static class ControlTime {
+            public static final int END_OF_VIDEO_TIME_STAMP = -1;
+
             private int timeStampStart;
             private int timeStampEnd;
             private int numberOfOptions;
@@ -115,7 +117,7 @@ public class NavigationDataBase {
     }
 
     private int numberOfScenes;
-    private Scene scenes[];
+    private Scene[] scenes;
 
     public NavigationDataBase(JSONObject database) throws JSONException {
         numberOfScenes = database.length();
@@ -145,7 +147,7 @@ public class NavigationDataBase {
             return (Integer.parseInt(timeStampMatcher.group(1)) * 60 + Integer.parseInt(timeStampMatcher.group(2))) * 1000;
         } else {
             if (input.equals("inf")) {
-                return -1;
+                return Scene.ControlTime.END_OF_VIDEO_TIME_STAMP;
             } else return 0;
         }
     }

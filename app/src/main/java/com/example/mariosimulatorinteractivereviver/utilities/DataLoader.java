@@ -37,7 +37,7 @@ public class DataLoader {
         return writer.toString();
     }
 
-    public static ArrayList<Button> addOptionButtonsToLayout(NavigationDataBase.Scene.ControlTime controlTime,
+    public static ArrayList<Button> addOptionsButtonsToLayout(NavigationDataBase.Scene.ControlTime controlTime,
                                                      RelativeLayout layout, Context context){
         int marginInPixels = context.getResources().getDimensionPixelSize(R.dimen.button_margin);
         ArrayList<Button> result = new ArrayList<>(controlTime.getNumberOfOptions());
