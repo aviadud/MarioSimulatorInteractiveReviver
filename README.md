@@ -19,9 +19,14 @@ You need to get your own Android API key and put it on Constants.java. After tha
 # How to continue from here?
 I wish I had more time to work on this project, but I can't. But maybe you can.
 There a lot of things to be work on:
-* change option buttons to be more like controller buttons.
+* Change option buttons to be more like controller buttons.
 * Change the design to be more appealing.
 * Make more accurate time stamps on database.
 * Count the destroyed toads and show it in the end of the game.
 * Make a game over activity
-and mush more.
+and much more.
+If you have the knowledge and the motivation feel free to fork this project and continue my work. Feel free to contact me on twitter [@aviadud](https://twitter.com/aviadud).
+
+# SMG4 if you reading this:
+Big fan of your old work. And thank you for inspiring new generation of machinimists. 
+
