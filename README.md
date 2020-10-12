@@ -28,5 +28,5 @@ and much more.
 If you have the knowledge and the motivation feel free to fork this project and continue my work. Feel free to contact me on twitter [@aviadud](https://twitter.com/aviadud).
 
 # SMG4 if you reading this:
-Thank you for inspiring new generation of machinimists. Big fan of your old work :-) 
+Thank you for inspiring new generation of machinimists and just keep on doing what you love. 
 
