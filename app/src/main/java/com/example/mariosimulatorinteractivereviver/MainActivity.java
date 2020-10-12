@@ -27,6 +27,7 @@ public class MainActivity extends YouTubeBaseActivity {
     private static final String TAG = MainActivity.class.getSimpleName();
     private static final int TIMER_DELAY_MILLIS = 250;
     private static final int BUTTONS_IN_ROW_LIMIT = 4;
+    private static final boolean DEBUG = false;
 
     private YouTubePlayerView mYouTubePlayerView;
     private YouTubePlayer mYouTubePlayer;
@@ -85,6 +86,12 @@ public class MainActivity extends YouTubeBaseActivity {
             public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean b) {
                 Log.d(TAG, "Youtube player initialization succeeded");
                 mYouTubePlayer = youTubePlayer;
+                if (DEBUG){
+                    mYouTubePlayer.setPlayerStyle(YouTubePlayer.PlayerStyle.DEFAULT);
+                }
+                else{
+                    mYouTubePlayer.setPlayerStyle(YouTubePlayer.PlayerStyle.MINIMAL);
+                }
                 youTubePlayerInitiated = true;
                 mYouTubePlayer.loadVideo(currentVideoId, currentTimeStamp);
                 mYouTubePlayer.setPlaybackEventListener(playbackEventListener);
