@@ -37,8 +37,7 @@ public class MainActivity extends YouTubeBaseActivity {
     private boolean actionTime;
     private NavigationDataBase navigationDataBase;
     private NavigationDataBase.Scene currentScene;
-    private NavigationDataBase.Scene.ControlTime currentControlTime;
-    private int currentControlTimeIndex;
+    private NavigationDataBase.Scene.ControlTime currentControlTime = null;
 
     private String currentVideoId;
     private int currentTimeStamp;
@@ -74,12 +73,7 @@ public class MainActivity extends YouTubeBaseActivity {
             } else {
                 currentTimeStamp = 0;
             }
-            currentControlTimeIndex = 0;
-            currentControlTime = currentScene.getControlTimes().get(currentControlTimeIndex);
-            actionTime = currentControlTime.getTimeStampStart() <= currentTimeStamp;
-            if (actionTime) {
-                optionsButtons = addOptionsButtons(currentControlTime);
-            }
+            actionTime = false;
         } catch (IOException | JSONException ex) {
             ex.printStackTrace();
             Log.d(TAG, "Can't load database");
@@ -127,9 +121,11 @@ public class MainActivity extends YouTubeBaseActivity {
 
             @Override
             public void onSeekTo(int i) {
-                if (i < currentControlTime.getTimeStampStart() ||
-                        (currentControlTime.getTimeStampEnd() != NavigationDataBase.Scene.ControlTime.END_OF_VIDEO_TIME_STAMP && currentControlTime.getTimeStampEnd() <= i)) {
-                    updateButtonsLayout();
+                if (currentControlTime != null) {
+                    if (i < currentControlTime.getTimeStampStart() ||
+                            (currentControlTime.getTimeStampEnd() != NavigationDataBase.Scene.ControlTime.END_OF_VIDEO_TIME_STAMP && currentControlTime.getTimeStampEnd() <= i)) {
+                        updateButtonsLayout();
+                    }
                 }
             }
         };
@@ -152,7 +148,7 @@ public class MainActivity extends YouTubeBaseActivity {
         if (youTubePlayerInitiated) {
             int currentTimeMillis = mYouTubePlayer.getCurrentTimeMillis();
             // remove buttons if the current video time is out of range of current time control.
-            if (actionTime &&
+            if (actionTime && currentControlTime != null &&
                     (currentTimeMillis < currentControlTime.getTimeStampStart() ||
                             (currentControlTime.getTimeStampEnd() != NavigationDataBase.Scene.ControlTime.END_OF_VIDEO_TIME_STAMP && currentControlTime.getTimeStampEnd() <= currentTimeMillis))) {
                 removeOptionsButtons();
@@ -164,7 +160,7 @@ public class MainActivity extends YouTubeBaseActivity {
                 if (controlTime.getTimeStampStart() <= currentTimeMillis &&
                         (currentTimeMillis < controlTime.getTimeStampEnd() ||
                                 controlTime.getTimeStampEnd() == NavigationDataBase.Scene.ControlTime.END_OF_VIDEO_TIME_STAMP)) {
-                    if (!currentControlTime.equals(controlTime) || !actionTime) {
+                    if (currentControlTime == null || !currentControlTime.equals(controlTime) || !actionTime) {
                         actionTime = true;
                         currentControlTime = controlTime;
                         optionsButtons = addOptionsButtons(currentControlTime);
@@ -185,12 +181,9 @@ public class MainActivity extends YouTubeBaseActivity {
                 currentVideoId = currentScene.getVideoId();
                 currentTimeStamp = 0;
                 mYouTubePlayer.loadVideo(currentVideoId, currentTimeStamp);
-                currentControlTimeIndex = 0;
-                currentControlTime = currentScene.getControlTimes().get(currentControlTimeIndex);
-                actionTime = currentControlTime.getTimeStampStart() <= currentTimeStamp;
-                if (actionTime) {
-                    optionsButtons = addOptionsButtons(currentControlTime);
-                }
+                currentControlTime = null;
+                actionTime = false;
+                updateButtonsLayout();
             } else {
                 Log.d(TAG, "Invalid scene ID given to load");
             }
@@ -271,6 +264,17 @@ public class MainActivity extends YouTubeBaseActivity {
     @Override
     protected void onPause() {
         super.onPause();
-        timerHandler.removeCallbacks(timerRunnable);
+        if (youTubePlayerInitiated) {
+            timerHandler.removeCallbacks(timerRunnable);
+        }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (youTubePlayerInitiated){
+            updateButtonsLayout();
+            timerHandler.postDelayed(timerRunnable, TIMER_DELAY_MILLIS);
+        }
     }
 }

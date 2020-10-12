@@ -1005,14 +1005,14 @@
             "button": "a"
           },
           {
-            "name": "It was the shay guy",
-            "scene": 40,
-            "button": "b"
-          },
-          {
             "name": "TOAD",
             "scene": 41,
             "button": "none"
+          },
+          {
+            "name": "It was the shay guy",
+            "scene": 40,
+            "button": "b"
           }
         ]
       }
