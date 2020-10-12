@@ -1,10 +1,10 @@
 # MarioSimulatorInteractiveReviver
-A project to make SMG4 Mario Simulator Interactive into a playable android app using YouTube API. To learn more about YouTube API see this: https://developers.google.com/youtube/android/player
+A project to make SMG4 Mario Simulator Interactive into a playable android app using YouTube API. To learn more about YouTube API see [this](https://developers.google.com/youtube/android/player).
 
 # Why I made this project?
 I've been watching SMG4 videos since 2015. Back then I was really disappointed that I can't play the Mario Simulator Interactive as intended on my smartphone. This is because annotations didn’t work on mobile. I had a dream that maybe one day I can do something about it.
 
-In 2019 I took a course the teach how to make android app using android studio. During the course the idea of getting the simulator to work on a mobile came back to my head. It has become much more relevant after that youtube stopped showing annotations and the simulator become not playable as intended. (https://mashable.com/article/the-death-of-youtube-annotations/)
+In 2019 I took a course the teach how to make android app using android studio. During the course the idea of getting the simulator to work on a mobile came back to my head. It has become much more relevant after that youtube [stopped showing annotations](https://mashable.com/article/the-death-of-youtube-annotations/) and the simulator become not playable as intended.
 
 After I finally had enough time, I started working on this project - The Mario Simulator Interactive Reviver. The main goal of this project is to make the app similar to the original simulator as much as possible.
 
@@ -18,3 +18,4 @@ You need to get your own Android API key and put it on Constants.java. After tha
 
 # How to continue from here?
 I wish I had more time to work on this project, but I can't. But maybe you can.
+There a lot 
