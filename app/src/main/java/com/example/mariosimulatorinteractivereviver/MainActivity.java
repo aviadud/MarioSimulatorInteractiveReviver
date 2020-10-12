@@ -241,7 +241,9 @@ public class MainActivity extends YouTubeBaseActivity {
                     }
                 });
             }
-            currentButton.setText(controlTime.getOptionButton(i));
+            if (!controlTime.getOptionButton(i).equals("none")) {
+                currentButton.setText(controlTime.getOptionButton(i));
+            }
             result.add(currentButton);
         }
         return result;
